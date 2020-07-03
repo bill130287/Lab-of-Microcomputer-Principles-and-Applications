@@ -1,0 +1,49 @@
+Dependencies for Project 'Timer', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_NUC1xx.s)(0x5A014C00)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 524"--list .\lst\startup_nuc1xx.lst --xref -o .\obj\startup_nuc1xx.o --depend .\obj\startup_nuc1xx.d)
+F (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.c)(0x4F619694)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\obj\system_nuc1xx.o --omf_browse .\obj\system_nuc1xx.crf --depend .\obj\system_nuc1xx.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+F (.\CM0\CoreSupport\core_cm0.c)(0x4F619694)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\obj\core_cm0.o --omf_browse .\obj\core_cm0.crf --depend .\obj\core_cm0.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (.\Timer_lab.c)(0x5A026E62)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\obj\timer_lab.o --omf_browse .\obj\timer_lab.crf --depend .\obj\timer_lab.d)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+I (.\Include\Driver\DrvSYS.h)(0x53EB4339)
+I (.\Include\Driver\DrvTIMER.h)(0x4F6196CA)
+I (.\Include\Driver\DrvGPIO.h)(0x51FA7D72)
+F (.\Src\Driver\DrvSYS.c)(0x53EB4378)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\obj\drvsys.o --omf_browse .\obj\drvsys.crf --depend .\obj\drvsys.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (.\Include\Driver\DrvSYS.h)(0x53EB4339)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+F (.\Src\Driver\DrvTIMER.c)(0x53EB36FF)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\obj\drvtimer.o --omf_browse .\obj\drvtimer.crf --depend .\obj\drvtimer.d)
+I (.\Include\Driver\DrvTIMER.h)(0x4F6196CA)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+I (.\Include\Driver\DrvSYS.h)(0x53EB4339)
+I (.\Include\Driver\DrvGPIO.h)(0x51FA7D72)
+F (.\Src\Driver\DrvGPIO.c)(0x51FA1CA6)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="524"-o .\obj\drvgpio.o --omf_browse .\obj\drvgpio.crf --depend .\obj\drvgpio.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+I (.\Include\Driver\DrvGPIO.h)(0x51FA7D72)

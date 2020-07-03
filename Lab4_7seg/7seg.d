@@ -1,0 +1,10 @@
+.\7seg.o: 7seg.c
+.\7seg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\7seg.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\7seg.o: .\CM0\CoreSupport\core_cm0.h
+.\7seg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\7seg.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\7seg.o: .\Include\System\SysInfra.h
+.\7seg.o: .\Include\System\ModuleID.h
+.\7seg.o: .\Include\Driver\DrvSYS.h
+.\7seg.o: .\Include\Driver\DrvGPIO.h

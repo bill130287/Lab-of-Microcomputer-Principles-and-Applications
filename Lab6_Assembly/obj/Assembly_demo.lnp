@@ -1,0 +1,6 @@
+--cpu Cortex-M0
+".\obj\main.o"
+--strict --scatter ".\obj\Assembly_demo.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\Assembly_demo.map" -o .\obj\Assembly_demo.axf

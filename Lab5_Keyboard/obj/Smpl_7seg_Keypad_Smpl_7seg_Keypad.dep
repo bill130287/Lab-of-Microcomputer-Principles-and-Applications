@@ -1,0 +1,40 @@
+Dependencies for Project 'Smpl_7seg_Keypad', Target 'Smpl_7seg_Keypad': (DO NOT MODIFY !)
+F (.\CM0\CoreSupport\core_cm0.c)(0x4F619694)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx-D__UVISION_VERSION="524"-o .\obj\core_cm0.o --list_dir ".\\lst\\" --list --omf_browse .\obj\core_cm0.crf --depend .\obj\core_cm0.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.c)(0x54486777)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx-D__UVISION_VERSION="524"-o .\obj\system_nuc1xx.o --list_dir ".\\lst\\" --list --omf_browse .\obj\system_nuc1xx.crf --depend .\obj\system_nuc1xx.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+F (.\CM0\DeviceSupport\Nuvoton\NUC1xx\startup\arm\startup_NUC1xx.s)(0x527EBF06)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --16 --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx--pd "__UVISION_VERSION SETA 524"--list .\lst\startup_nuc1xx.lst --xref -o .\obj\startup_nuc1xx.o --depend .\obj\startup_nuc1xx.d)
+F (.\Smpl_7seg_Keypad.c)(0x59EF0853)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx-D__UVISION_VERSION="524"-o .\obj\smpl_7seg_keypad.o --list_dir ".\\lst\\" --list --omf_browse .\obj\smpl_7seg_keypad.crf --depend .\obj\smpl_7seg_keypad.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+I (.\Include\Driver\DrvSYS.h)(0x53EB4339)
+I (.\Include\Driver\DrvGPIO.h)(0x51FA7D72)
+F (.\Src\NUC1xx-LB_002\Ascii_Table.c)(0x4F6196E4)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx-D__UVISION_VERSION="524"-o .\obj\ascii_table.o --list_dir ".\\lst\\" --list --omf_browse .\obj\ascii_table.crf --depend .\obj\ascii_table.d)
+F (.\Src\Driver\DrvGPIO.c)(0x59EF00CC)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx-D__UVISION_VERSION="524"-o .\obj\drvgpio.o --list_dir ".\\lst\\" --list --omf_browse .\obj\drvgpio.crf --depend .\obj\drvgpio.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)
+I (.\Include\Driver\DrvGPIO.h)(0x51FA7D72)
+F (.\Src\Driver\DrvSYS.c)(0x53F4AFDE)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\CM0\DeviceSupport\Nuvoton\NUC1xx -I .\Include -I .\Include\Driver -I .\ -I .\Src\Driver -I .\CM0\CoreSupport-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx-D__UVISION_VERSION="524"-o .\obj\drvsys.o --list_dir ".\\lst\\" --list --omf_browse .\obj\drvsys.crf --depend .\obj\drvsys.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (.\Include\Driver\DrvSYS.h)(0x53EB4339)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h)(0x4F619694)
+I (.\CM0\CoreSupport\core_cm0.h)(0x51060D70)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (.\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h)(0x4F619694)
+I (.\Include\System\SysInfra.h)(0x4F6196CA)
+I (.\Include\System\ModuleID.h)(0x4F6196CA)

@@ -1,0 +1,11 @@
+.\obj\smpl_pwm_music.o: Smpl_PWM_Music.c
+.\obj\smpl_pwm_music.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\smpl_pwm_music.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\smpl_pwm_music.o: .\CM0\CoreSupport\core_cm0.h
+.\obj\smpl_pwm_music.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\smpl_pwm_music.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\smpl_pwm_music.o: .\Include\System\SysInfra.h
+.\obj\smpl_pwm_music.o: .\Include\System\ModuleID.h
+.\obj\smpl_pwm_music.o: .\Include\Driver\DrvSYS.h
+.\obj\smpl_pwm_music.o: .\Include\NUC1xx-LB_002\LCD_Driver.h
+.\obj\smpl_pwm_music.o: note_freq.h

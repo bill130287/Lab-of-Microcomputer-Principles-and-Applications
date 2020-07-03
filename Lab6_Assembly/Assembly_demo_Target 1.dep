@@ -1,0 +1,2 @@
+Dependencies for Project 'Assembly_demo', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.s)(0x562F3491)(--cpu Cortex-M0 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\lst\main.lst --xref -o .\obj\main.o --depend .\obj\main.d)

@@ -1,0 +1,10 @@
+.\obj\drvtimer.o: Src\Driver\DrvTIMER.c
+.\obj\drvtimer.o: .\Include\Driver\DrvTIMER.h
+.\obj\drvtimer.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\drvtimer.o: .\CM0\CoreSupport\core_cm0.h
+.\obj\drvtimer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\drvtimer.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\drvtimer.o: .\Include\System\SysInfra.h
+.\obj\drvtimer.o: .\Include\System\ModuleID.h
+.\obj\drvtimer.o: .\Include\Driver\DrvSYS.h
+.\obj\drvtimer.o: .\Include\Driver\DrvGPIO.h

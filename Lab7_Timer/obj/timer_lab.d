@@ -1,0 +1,10 @@
+.\obj\timer_lab.o: Timer_lab.c
+.\obj\timer_lab.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\timer_lab.o: .\CM0\CoreSupport\core_cm0.h
+.\obj\timer_lab.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\timer_lab.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\timer_lab.o: .\Include\System\SysInfra.h
+.\obj\timer_lab.o: .\Include\System\ModuleID.h
+.\obj\timer_lab.o: .\Include\Driver\DrvSYS.h
+.\obj\timer_lab.o: .\Include\Driver\DrvTIMER.h
+.\obj\timer_lab.o: .\Include\Driver\DrvGPIO.h

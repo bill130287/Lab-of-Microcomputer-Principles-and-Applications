@@ -1,0 +1,9 @@
+.\obj\lab_gpio.o: LAB_GPIO.c
+.\obj\lab_gpio.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\lab_gpio.o: .\CM0\CoreSupport\core_cm0.h
+.\obj\lab_gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\lab_gpio.o: .\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\lab_gpio.o: .\Include\System\SysInfra.h
+.\obj\lab_gpio.o: .\Include\System\ModuleID.h
+.\obj\lab_gpio.o: .\Include\Driver\DrvSYS.h
+.\obj\lab_gpio.o: .\Include\Driver\DrvGPIO.h

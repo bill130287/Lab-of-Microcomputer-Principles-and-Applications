@@ -1,0 +1,6 @@
+--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --16 --apcs=interwork 
+-IC:\Keil_v5\ARM\RV31\INC
+-IC:\Keil_v5\ARM\CMSIS\Include
+-IC:\Keil_v5\ARM\INC\Nuvoton\NUC1xx
+--pd "__UVISION_VERSION SETA 524"
+--list .\lst\startup_nuc1xx.lst --xref -o .\obj\startup_nuc1xx.o --depend .\obj\startup_nuc1xx.d "CM0\DeviceSupport\Nuvoton\NUC1xx\startup\arm\startup_NUC1xx.s"
