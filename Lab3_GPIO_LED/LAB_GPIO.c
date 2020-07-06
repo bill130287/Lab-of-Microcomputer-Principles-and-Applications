@@ -118,7 +118,7 @@ int main(void)
 		SYS_Delay(100000);
 	 
 	    /*
-        for(time=0;time<4;time++)
+		for(time=0;time<4;time++)
 	    {
 		    ledout(scandata);
 		    scandata=scandata >> 1;
