@@ -56,15 +56,15 @@ void show_seven_segment(unsigned int place, unsigned int number)
  	temp=SEG[number];
 	
    	for(i=0;i<8;i++)
-    {
+	{
 		if((temp&0x01)==0x01)
 		{		   	  
 			DrvGPIO_SetBit(E_GPE,i);
-		}
-	    else
-        {
-		    DrvGPIO_ClrBit(E_GPE,i);	
-	    }	  
+		}	
+		else
+ 		{
+			DrvGPIO_ClrBit(E_GPE,i);	
+		}	  
 		temp=temp>>1;
 	}
 	GPC_set(E_GPC,3+place);	
@@ -88,7 +88,7 @@ uint8_t Scan_key(void)
 		temp=act[i];
 		for(pin=0;pin<3;pin++)
 		{
-		    if((temp&0x01)==0x01)
+			if((temp&0x01)==0x01)
 				DrvGPIO_SetBit(E_GPA,pin);
 			else
 				DrvGPIO_ClrBit(E_GPA,pin);
