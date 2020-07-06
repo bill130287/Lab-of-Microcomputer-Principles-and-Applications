@@ -87,7 +87,7 @@ int main(void)
 	GPIO_Mode_Select(groupC,14,MODE_output);
 	GPIO_Mode_Select(groupC,15,MODE_output);	
  
-    while(1)
+	while(1)
 	{
 		for(num=0;num<4;num++)
 		{
