@@ -15,7 +15,7 @@ void SYS_Delay(unsigned int us)
 {
 	static unsigned char repeat;
 	
-    // If STCLK is 25M Hz.
+	// If STCLK is 25M Hz.
 	//
 	repeat = 25;
 	SysTick->CTRL &= ~( 1 | 1 << 16 ); 
@@ -23,7 +23,7 @@ void SYS_Delay(unsigned int us)
 	SysTick->VAL  = 0;
 	SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
 	while(repeat--)
-        {
+	{
 		/* Waiting for down-count to zero */
 		while((SysTick->CTRL & (1 << 16)) == 0);
 		SysTick->VAL  = 0;
@@ -35,7 +35,7 @@ void GPIO_Mode_Select(int group,int pin,int mode)
 	volatile unsigned int*reg_ptr,reg_data;
 	reg_ptr=(unsigned int*)(0x50004000+group);
 	reg_data=*reg_ptr&(~(3<<(pin<<1)));
-    	*reg_ptr=reg_data|(mode<<(pin<<1));
+	*reg_ptr=reg_data|(mode<<(pin<<1));
 
 	return;
 }
@@ -87,7 +87,7 @@ int main(void)
 	GPIO_Mode_Select(groupC,14,MODE_output);
 	GPIO_Mode_Select(groupC,15,MODE_output);	
  
-    	while(1)
+    while(1)
 	{
 		for(num=0;num<4;num++)
 		{
