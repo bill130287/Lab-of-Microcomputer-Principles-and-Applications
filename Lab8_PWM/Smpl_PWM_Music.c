@@ -92,5 +92,5 @@ int main (void)
 			 PWM_Freq(music[time]);
 			 SYS_Delay(pitch[time]);
 		}
-	};
+	}
 }
