@@ -28,7 +28,7 @@ unsigned char seg[4] = {0x0, 0x0, 0x0, 0x0};
 
 void SYS_Delay(unsigned int us)
 {
-    static unsigned char repeat;
+   	static unsigned char repeat;
 	
 	// If STCLK is 25M Hz.
 	repeat = 25;
@@ -37,8 +37,8 @@ void SYS_Delay(unsigned int us)
 	SysTick->VAL  = 0;
 	SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
 	while(repeat--)
-    {
-	    /* Waiting for down-count to zero */
+    	{
+	    	/* Waiting for down-count to zero */
 		while((SysTick->CTRL & (1 << 16)) == 0);
 		SysTick->VAL  = 0;
 	}	
@@ -46,27 +46,27 @@ void SYS_Delay(unsigned int us)
 
 void GPC_set(unsigned int group, unsigned int pin)
 {
-    reg_ptr = (unsigned int *)(0x50004000 + group * 0x40 + 0x08);
-    *reg_ptr = (unsigned int)((1<<pin) | (0xf<<12));
+	reg_ptr = (unsigned int *)(0x50004000 + group * 0x40 + 0x08);
+    	*reg_ptr = (unsigned int)((1<<pin) | (0xf<<12));
 }
 
 void show_seven_segment(unsigned int place, unsigned int number)
 {
-    unsigned int temp,i;
-    temp=SEG[number];
+    	unsigned int temp,i;
+    	temp=SEG[number];
 	
-    for(i=0;i<8;i++)
-    {
-	    if((temp&0x01)==0x01)
-        {		   	  
-		    DrvGPIO_SetBit(E_GPE,i);
-	    }
-	    else
-        {
-		    DrvGPIO_ClrBit(E_GPE,i);	
-	    }	  
+   	for(i=0;i<8;i++)
+    	{
+		if((temp&0x01)==0x01)
+        	{		   	  
+			DrvGPIO_SetBit(E_GPE,i);
+	    	}
+	    	else
+        	{
+		    	DrvGPIO_ClrBit(E_GPE,i);	
+	    	}	  
 		temp=temp>>1;
-    }
+    	}
 	GPC_set(E_GPC,3+place);	
 }
 
@@ -75,7 +75,7 @@ void OpenKey_Pad(void)
 	uint8_t i;
 	/* Initial key pad mode */
 	for(i=0;i<6;i++)
-	    DrvGPIO_Open(E_GPA, i, E_IO_QUASI);
+		DrvGPIO_Open(E_GPA, i, E_IO_QUASI);
 }
 
 uint8_t Scan_key(void)
@@ -109,30 +109,30 @@ int32_t main (void)
 	int key,temp;
 	
 	UNLOCKREG();
-    DrvSYS_Open(48000000);
+    	DrvSYS_Open(48000000);
 	LOCKREG();
 
 	OpenKey_Pad();					 	
 	
 	while(1)
 	{				
-	    key = Scan_key();
+	    	key = Scan_key();
 		temp = key;	
 
 		if(temp != 0)
 		{
-		    seg[3]=seg[2];
+		    	seg[3]=seg[2];
 			seg[2]=seg[1];
 			seg[1]=seg[0];
 			seg[0]=temp;	
 		}
 		while(key == temp)
 		{
-		    key = Scan_key();
+		    	key = Scan_key();
 			//show_seven_segment();		
 			show_seven_segment(1, seg[0]);
 			SYS_Delay(2000);
-       	    show_seven_segment(2, seg[1]);
+       	    		show_seven_segment(2, seg[1]);
 			SYS_Delay(2000);
 			show_seven_segment(3, seg[2]);
 			SYS_Delay(2000);
@@ -146,7 +146,7 @@ int32_t main (void)
 void HardFault_Handler(void)
 {
 	while(1)
-    {
+    	{
 		//HardFault
 	}
 }
