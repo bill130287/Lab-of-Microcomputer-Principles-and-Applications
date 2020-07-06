@@ -2,5 +2,5 @@
 2020/07/06
 
 ## main function
-    * Time_lab.c (Result):
+   * Time_lab.c (Result):
 ![Alt text]()
