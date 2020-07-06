@@ -20,7 +20,7 @@ void SYS_Delay(unsigned int us)
 	SysTick->VAL  = 0;
 	SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
 	while(repeat--)
-    {
+	{
 		/* Waiting for down-count to zero */
 		while((SysTick->CTRL & (1 << 16)) == 0);
 		SysTick->VAL  = 0;
@@ -29,7 +29,7 @@ void SYS_Delay(unsigned int us)
 
 void PWM4_Init(void)
 {
-    PWMB->PPR.CP01 = 99; // Divide by ?
+	PWMB->PPR.CP01 = 99; // Divide by ?
 	PWMB->CSR.CSR0 = 0; // Divide by ?
 	
 	PWMB->PCR.CH0MOD =1 ; // PWM Timer's Mode.
