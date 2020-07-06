@@ -11,7 +11,7 @@
 
 void SYS_Delay(unsigned int us)
 {
-    static unsigned char repeat;
+	static unsigned char repeat;
 	
 	// If sys clock is 25M Hz.
 	repeat = 25;
