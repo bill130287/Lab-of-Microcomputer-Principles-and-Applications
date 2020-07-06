@@ -1,5 +1,5 @@
 # -Lab-of-Microcomputer-Principles-and-Applications
-//2020/07/03 test
+2020/07/06
 ## Hardware
   * Microcontroller: NUC140VE3CN
   * Core: ARM Cortex M0
