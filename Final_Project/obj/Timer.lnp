@@ -1,0 +1,13 @@
+--cpu Cortex-M0
+".\obj\startup_nuc1xx.o"
+".\obj\system_nuc1xx.o"
+".\obj\core_cm0.o"
+".\obj\lab_lcd.o"
+".\obj\drvsys.o"
+".\obj\lcd_driver.o"
+".\obj\drvgpio.o"
+".\obj\ascii_table.o"
+--library_type=microlib --strict --scatter ".\obj\Timer.sct"
+--entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\Timer.map" -o .\obj\Timer.axf
