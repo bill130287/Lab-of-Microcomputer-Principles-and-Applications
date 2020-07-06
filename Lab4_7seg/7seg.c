@@ -25,16 +25,16 @@ volatile unsigned int *reg_ptr;
 
 void SYS_Delay(unsigned int us)
 {
-    static unsigned char repeat;
+	static unsigned char repeat;
 	
 	// If STCLK is 25M Hz.
-    repeat = 25;
+    	repeat = 25;
 	SysTick->CTRL &= ~( 1 | 1 << 16 ); 
 	SysTick->LOAD = us;
 	SysTick->VAL  = 0;
 	SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
 	while(repeat--)
-    {
+    	{
 		/* Waiting for down-count to zero */
 		while((SysTick->CTRL & (1 << 16)) == 0);
 		SysTick->VAL  = 0;
@@ -43,33 +43,33 @@ void SYS_Delay(unsigned int us)
 
 void GPC_set(unsigned int group, unsigned int pin)
 {
-    reg_ptr = (unsigned int *)(0x50004000 + group * 0x40 + 0x08);
-    *reg_ptr = (unsigned int)((1<<pin) | (0xf<<12));
+    	reg_ptr = (unsigned int *)(0x50004000 + group * 0x40 + 0x08);
+    	*reg_ptr = (unsigned int)((1<<pin) | (0xf<<12));
 }
 
 void show_seven_segment(unsigned int place, unsigned int number)
 {
-    unsigned int temp,i;
-    temp=SEG[number];
+    	unsigned int temp,i;
+    	temp=SEG[number];
 	
-    for(i=0;i<8;i++)
-    {
-	    if((temp&0x01)==0x01)
-	    {		   	  
-		    DrvGPIO_SetBit(E_GPE,i);
-	    }
-	    else
-	    {
-		    DrvGPIO_ClrBit(E_GPE,i);	
-	    }	  
+    	for(i=0;i<8;i++)
+    	{
+	    	if((temp&0x01)==0x01)
+	    	{		   	  
+		    	DrvGPIO_SetBit(E_GPE,i);
+	    	}
+	    	else
+	    	{
+			DrvGPIO_ClrBit(E_GPE,i);	
+	    	}	  
 		temp=temp>>1;
-    }
+   	}
 	GPC_set(E_GPC,3+place);	
 }
 
 int32_t main (void)
 {
-    unsigned int set_number;
+	unsigned int set_number;
 	
 	unsigned int second1=0,second2=0,minute1=0,minute2=0;
 	UNLOCKREG();
@@ -80,15 +80,15 @@ int32_t main (void)
 	
 	
 	
-    while(1)
+    	while(1)
 	{
-	    for(set_number=0;set_number<15;set_number++)
-	    {
-	    /*{
+		for(set_number=0;set_number<15;set_number++)
+	    	{
+	    	/*{
 			show_seven_segment(set_number,second1);
 		}*/
 			
-		    show_seven_segment(1,second1);
+			show_seven_segment(1,second1);
 			SYS_Delay(5000);
 			show_seven_segment(2,second2);
 			SYS_Delay(5000);
@@ -100,11 +100,11 @@ int32_t main (void)
 		second1++;
 		if(second1==10)
 		{
-		    second1=0;
+		    	second1=0;
 			second2++;
-		    if(second2==6)
+		    	if(second2==6)
 			{
-			    second2=0;
+			    	second2=0;
 				second1=0;
 				minute1++;
 				if(minute1==10)
@@ -146,5 +146,5 @@ int32_t main (void)
 			second2=0;
 		}
 		*/
-    }
+    	}
 }
