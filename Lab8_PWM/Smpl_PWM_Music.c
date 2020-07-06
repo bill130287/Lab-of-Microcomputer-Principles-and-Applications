@@ -1,4 +1,4 @@
-#include <stdio.h>																											 
+#include <stdio.h>
 #include "NUC1xx.h"
 #include "DrvSYS.h"
 #include "NUC1xx-LB_002\LCD_Driver.h"
@@ -11,24 +11,25 @@
 
 void SYS_Delay(unsigned int us)
 {
-		static unsigned char repeat;
+    static unsigned char repeat;
 	
-		// If sys clock is 25M Hz.
-	  repeat = 25;
-			SysTick->CTRL &= ~( 1 | 1 << 16 ); 
-			SysTick->LOAD = us;
-			SysTick->VAL  = 0;
-			SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
-		while(repeat--){
-			/* Waiting for down-count to zero */
-			while((SysTick->CTRL & (1 << 16)) == 0);
-			SysTick->VAL  = 0;
-		}	
+	// If sys clock is 25M Hz.
+	repeat = 25;
+	SysTick->CTRL &= ~( 1 | 1 << 16 ); 
+	SysTick->LOAD = us;
+	SysTick->VAL  = 0;
+	SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
+	while(repeat--)
+    {
+		/* Waiting for down-count to zero */
+		while((SysTick->CTRL & (1 << 16)) == 0);
+		SysTick->VAL  = 0;
+	}	
 }
 
 void PWM4_Init(void)
 {
-	PWMB->PPR.CP01 = 99; // Divide by ?
+    PWMB->PPR.CP01 = 99; // Divide by ?
 	PWMB->CSR.CSR0 = 0; // Divide by ?
 	
 	PWMB->PCR.CH0MOD =1 ; // PWM Timer's Mode.
@@ -69,6 +70,7 @@ int main (void)
 		P250ms, P250ms, P250ms, P250ms,	P250ms, P250ms, P250ms, P250ms,	P250ms, P250ms, P250ms, P250ms,
 		P250ms, P250ms, P250ms, P250ms,	P250ms, P250ms, P250ms, P250ms,	P250ms, P250ms, P250ms, P250ms
 	};
+
 	int time;
 	UNLOCKREG();
 	DrvSYS_Open(50000000);// Set System Clock to run at 50MHz.
@@ -85,7 +87,7 @@ int main (void)
 	while(1)
 	{
 		//Write your code here.
-		for(time=0;time<72;time++)
+	    for(time=0;time<72;time++)
 		{
 			 PWM_Freq(music[time]);
 			 SYS_Delay(pitch[time]);

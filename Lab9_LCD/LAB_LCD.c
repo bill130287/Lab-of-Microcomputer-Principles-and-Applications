@@ -7,20 +7,21 @@
 
 void SYS_Delay(unsigned int us)
 {
-		static unsigned char repeat;
+    static unsigned char repeat;
 	
-		// If sys clock is 25M Hz.
-	  repeat = 25;
+	// If sys clock is 25M Hz.
+	repeat = 25;
 
-			SysTick->CTRL &= ~( 1 | 1 << 16 ); 
-			SysTick->LOAD = us;
-			SysTick->VAL  = 0;
-			SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
-		while(repeat--){
-			/* Waiting for down-count to zero */
-			while((SysTick->CTRL & (1 << 16)) == 0);
-			SysTick->VAL  = 0;
-		}
+	SysTick->CTRL &= ~( 1 | 1 << 16 ); 
+	SysTick->LOAD = us;
+	SysTick->VAL  = 0;
+	SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
+	while(repeat--)
+    {
+		/* Waiting for down-count to zero */
+		while((SysTick->CTRL & (1 << 16)) == 0);
+		SysTick->VAL  = 0;
+	}
 }
 
 // Range: 0 <= x <= 63
@@ -28,7 +29,7 @@ void SYS_Delay(unsigned int us)
 
 void Draw_pix( unsigned char  x,  unsigned char  y, unsigned char color)
 { 
-	char PA,CA,data,a;
+    char PA,CA,data,a;
 	  
 	 
 	PA=x/8;
@@ -37,7 +38,7 @@ void Draw_pix( unsigned char  x,  unsigned char  y, unsigned char color)
     switch(a)	
 	{
 		case 0: data=0x01; break;
-		case 1: data=0x02; break;
+        case 1: data=0x02; break;
 		case 2: data=0x04; break;
 		case 3: data=0x08; break;
 		case 4: data=0x10; break;
@@ -71,16 +72,17 @@ int main(void)
 			 number[y]=x;
 			Draw_pix( number[y],  y, color);
 	  }
-		*/
+	*/
+
 	tmp=0;
 	while(1)
 	{ 
 	    clr_all_panel();
 		for(y=0;y<=127;y++)
 		{
-			 x=32+10*sin(2*(y-tmp)/20.22);
-			 number[y]=x;
-			Draw_pix( number[y],  y, color);
+			x=32+10*sin(2*(y-tmp)/20.22);
+			number[y]=x;
+		    Draw_pix( number[y],  y, color);
 	    }
 		tmp=tmp+1;
 	    SYS_Delay(250000);
@@ -100,20 +102,19 @@ int main(void)
 		
 		}
 		
-	for(y=0;y<=127;y++)
+	    for(y=0;y<=127;y++)
 		{
-			
 			Draw_pix( number[y],  y, color);
-	  }
+	    }
 		SYS_Delay(150000);
 		// Sin Function  y=Vmsin(2pif+x);
-	}
-	*/
+	    */
     }
 }
 void HardFault_Handler(void)
 {
-	while(1){
+	while(1)
+    {
 		//HardFault
 	}
 }

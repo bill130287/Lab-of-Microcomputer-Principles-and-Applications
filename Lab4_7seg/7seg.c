@@ -1,22 +1,22 @@
-#include <stdio.h>																											 
+#include <stdio.h>
 #include "NUC1xx.h"
 #include "Driver\DrvSYS.h"
 #include "Driver\DrvGPIO.h"
 
 //define 7seg codex here
 #define SEG_0   0x82 
-#define SEG_1		0xEE
-#define SEG_2		0x07
-#define SEG_3		0x46
-#define SEG_4 	0x6A
-#define SEG_5		0x52	
-#define SEG_6		0x1A
-#define SEG_7		0xE6	
-#define SEG_8		0x02
+#define SEG_1   0xEE
+#define SEG_2   0x07
+#define SEG_3   0x46
+#define SEG_4   0x6A
+#define SEG_5   0x52	
+#define SEG_6   0x1A
+#define SEG_7   0xE6	
+#define SEG_8   0x02
 #define SEG_9   0x62  
 
-#define groupC 2
-#define groupE 4
+#define groupC  2
+#define groupE  4
 
 unsigned int SEG[10]={SEG_0, SEG_1, SEG_2, SEG_3, SEG_4, SEG_5, SEG_6, SEG_7, SEG_8, SEG_9}; 
 
@@ -25,25 +25,26 @@ volatile unsigned int *reg_ptr;
 
 void SYS_Delay(unsigned int us)
 {
-		static unsigned char repeat;
+    static unsigned char repeat;
 	
-		// If STCLK is 25M Hz.
-		repeat = 25;
-		SysTick->CTRL &= ~( 1 | 1 << 16 ); 
-		SysTick->LOAD = us;
+	// If STCLK is 25M Hz.
+    repeat = 25;
+	SysTick->CTRL &= ~( 1 | 1 << 16 ); 
+	SysTick->LOAD = us;
+	SysTick->VAL  = 0;
+	SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
+	while(repeat--)
+    {
+		/* Waiting for down-count to zero */
+		while((SysTick->CTRL & (1 << 16)) == 0);
 		SysTick->VAL  = 0;
-		SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
-		while(repeat--){
-			/* Waiting for down-count to zero */
-			while((SysTick->CTRL & (1 << 16)) == 0);
-			SysTick->VAL  = 0;
-		}	
+	}	
 }
 
 void GPC_set(unsigned int group, unsigned int pin)
 {
-reg_ptr = (unsigned int *)(0x50004000 + group * 0x40 + 0x08);
-*reg_ptr = (unsigned int)((1<<pin) | (0xf<<12));
+    reg_ptr = (unsigned int *)(0x50004000 + group * 0x40 + 0x08);
+    *reg_ptr = (unsigned int)((1<<pin) | (0xf<<12));
 }
 
 void show_seven_segment(unsigned int place, unsigned int number)
@@ -79,11 +80,11 @@ int32_t main (void)
 	
 	
 	
-	while(1)
+    while(1)
 	{
-		for(set_number=0;set_number<15;set_number++)
-		{
-		/*{
+	    for(set_number=0;set_number<15;set_number++)
+	    {
+	    /*{
 			show_seven_segment(set_number,second1);
 		}*/
 			
@@ -99,7 +100,7 @@ int32_t main (void)
 		second1++;
 		if(second1==10)
 		{
-			second1=0;
+		    second1=0;
 			second2++;
 		    if(second2==6)
 			{
@@ -144,7 +145,6 @@ int32_t main (void)
 			second1=0;
 			second2=0;
 		}
-			*/
-		//write your code here.
+		*/
     }
 }

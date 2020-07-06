@@ -15,15 +15,16 @@ void SYS_Delay(unsigned int us)
 {
 		static unsigned char repeat;
 	
-		// If STCLK is 25M Hz.
-	  //
+    // If STCLK is 25M Hz.
+	//
 		repeat = 25;
 		SysTick->CTRL &= ~( 1 | 1 << 16 ); 
 		SysTick->LOAD = us;
 		SysTick->VAL  = 0;
 		SysTick->CTRL = SysTick_CTRL_ENABLE_Msk;
-		while(repeat--){
-			/* Waiting for down-count to zero */
+		while(repeat--)
+        {
+		    /* Waiting for down-count to zero */
 			while((SysTick->CTRL & (1 << 16)) == 0);
 			SysTick->VAL  = 0;
 		}	
@@ -34,9 +35,9 @@ void GPIO_Mode_Select(int group,int pin,int mode)
 	volatile unsigned int*reg_ptr,reg_data;
 	reg_ptr=(unsigned int*)(0x50004000+group);
 	reg_data=*reg_ptr&(~(3<<(pin<<1)));
-  *reg_ptr=reg_data|(mode<<(pin<<1));
+    *reg_ptr=reg_data|(mode<<(pin<<1));
 
-	 return;
+	return;
 }
 
 void GPIO_Write(int group,int pin,int data)
@@ -54,10 +55,9 @@ void ledout (unsigned int scandata)
 	
 	for(scan=15; scan>11; scan--)
 	{
-		data = (0x01)&(scandata >> (15-scan));
+	    data = (0x01)&(scandata >> (15-scan));
 		GPIO_Mode_Select (groupC, scan, MODE_output);
 		GPIO_Write(groupC,scan,data);
-		
 	}
 	
 }
@@ -87,26 +87,26 @@ int main(void)
 	GPIO_Mode_Select(groupC,14,MODE_output);
 	GPIO_Mode_Select(groupC,15,MODE_output);	
  
-	while(1)
+    while(1)
 	{
-		 for(num=0;num<4;num++)
-		 {
-			 ledout(array_scandata[num]);
-			 SYS_Delay(100000);
-		 }
-		 for(num=3;num>=0;num--)
-		 {
-			 ledout(array_scandata[num]);
-			 SYS_Delay(100000);
-		 }
+	    for(num=0;num<4;num++)
+		{
+		    ledout(array_scandata[num]);
+			SYS_Delay(100000);
+		}
+		for(num=3;num>=0;num--)
+		{
+			ledout(array_scandata[num]);
+			SYS_Delay(100000);
+		}
 		/*
-		 ledout(0x07);
+		ledout(0x07);
 		SYS_Delay(100000);
 		ledout(0x0B);
 		SYS_Delay(100000);
 		ledout(0x0D);
 		SYS_Delay(100000);
-		 ledout(0x0E);
+		ledout(0x0E);
 		SYS_Delay(100000);
 		ledout(0x0E);
 		SYS_Delay(100000);
@@ -117,12 +117,12 @@ int main(void)
 		ledout(0x07);
 		SYS_Delay(100000);
 	 
-	 /*
-	 for(time=0;time<4;time++)
-	 {
-		 ledout(scandata);
-		 scandata=scandata >> 1;
-	 }
+	    /*
+        for(time=0;time<4;time++)
+	    {
+		    ledout(scandata);
+		    scandata=scandata >> 1;
+	    }
 		
 		GPIO_Write(groupC,12,0);
 		GPIO_Write(groupC,13,1);
@@ -165,14 +165,15 @@ int main(void)
 		GPIO_Write(groupC,15,1);
 		SYS_Delay(1000000);
 		*/
-	};
+	}
 	
 }
 
 
 void HardFault_Handler(void)
 {
-	while(1){
-		//HardFault
+    while(1)
+    {
+	    //HardFault
 	}
 }
