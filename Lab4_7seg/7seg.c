@@ -50,7 +50,7 @@ void GPC_set(unsigned int group, unsigned int pin)
 void show_seven_segment(unsigned int place, unsigned int number)
 {
 	unsigned int temp,i;
-    temp=SEG[number];
+	temp=SEG[number];
 	
 	for(i=0;i<8;i++)
 	{
