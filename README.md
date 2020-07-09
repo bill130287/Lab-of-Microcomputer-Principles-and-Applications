@@ -9,4 +9,4 @@
   * PWM: 16 bits resolution, 8 channels
   * GPIO
 ## Development Tools
-  * ARM Keil
+  * IDE: Keil uVision
